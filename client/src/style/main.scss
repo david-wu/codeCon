@@ -1,0 +1,12 @@
+body{
+    font-family: $main-font;
+    color: $darkBrandColor;
+}
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+.invisible{
+    visibility: none;
+}

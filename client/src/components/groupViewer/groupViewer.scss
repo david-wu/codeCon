@@ -1,0 +1,28 @@
+group-viewer{
+    flex-grow: 1;
+    background-color: #F0FFFF;
+
+    table{
+        width: 100%;
+    }
+
+    h1{
+        padding: 30px;
+        font-size: 24px;
+        background-color: $brandColor;
+        color: white;
+    }
+
+    tr{
+        &.header{
+            background-color: #F3FAB6;
+        }
+    }
+
+    td, th{
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        margin: 0;
+    }
+}

@@ -1,0 +1,19 @@
+<div class="flex column" style="min-height:100%;">
+    <h1 ng-if="title">{{title}} ({{items.length}})</h1>
+
+    <table>
+
+        <tr ng-if="items.length" class="header row">
+            <th ng-repeat="column in columns">
+                {{column.headerName}}
+            </th>
+        </tr>
+
+        <tr ng-if="items.length" class="row" ng-repeat="item in items">
+            <td ng-repeat="column in columns">
+                {{column.text(item)}}
+            </td>
+        </tr>
+
+    </table>
+</div>
