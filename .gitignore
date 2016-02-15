@@ -4,5 +4,3 @@ client/node_modules
 server/node_modules
 client/build
 client/.tmp
-server/secret.keys
-server/secret2.keys

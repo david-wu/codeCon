@@ -21,7 +21,7 @@ function linkFunc(scope, element, attrs){
         if(scope.spinning){return;}
 
         var response = scope.clickHandler()
-        if(response.then){
+        if(response && response.then){
             scope.spinning = true;
             response
                 .then(function(){

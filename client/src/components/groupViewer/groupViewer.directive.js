@@ -1,23 +1,30 @@
-angular.module('components')
+angular.module('groupViewer')
     .directive('groupViewer', [
+        'Column',
         GroupViewer
     ]);
 
-function GroupViewer(){
+function GroupViewer(Column){
     return {
         scope: {
-            items: '=?',
+            data: '=?',
             columns: '=?',
             title: '@?'
         },
         templateUrl: 'components/groupViewer/groupViewer.tpl.html',
-        link: linkFunc.bind(null),
+        link: linkFunc.bind(null, Column),
     };
 }
 
-function linkFunc(scope, element, attrs){
+function linkFunc(Column, scope, element, attrs){
     _.defaults(scope, {
-        items: [],
+        data: [],
         columns: [],
     });
+
+    scope.$watch(scope.columns, function(column){
+        scope.viewerColumns = _.map(scope.columns, function(column){
+            return new Column(column);
+        });
+    })
 }

@@ -1,18 +1,16 @@
 <div class="flex column" style="min-height:100%;">
-    <h1 ng-if="title">{{title}} ({{items.length}})</h1>
+    <h1 ng-if="title">{{title}} ({{data.length}})</h1>
 
     <table>
 
-        <tr ng-if="items.length" class="header row">
-            <th ng-repeat="column in columns">
-                {{column.headerName}}
+        <tr ng-if="data.length" class="header row">
+            <th ng-repeat="column in viewerColumns" ng-class="column.headerClass">
+                {{column.headerText}}
             </th>
         </tr>
 
-        <tr ng-if="items.length" class="row" ng-repeat="item in items">
-            <td ng-repeat="column in columns">
-                {{column.text(item)}}
-            </td>
+        <tr ng-if="data.length" class="row" ng-repeat="d in data">
+            <td ng-repeat="column in viewerColumns" ng-class="column.class(d)" ng-click="column.clickHandler(d)" ng-bind-html="column.html(d)"></td>
         </tr>
 
     </table>

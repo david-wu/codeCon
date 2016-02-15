@@ -3,17 +3,17 @@ angular.module('views', [])
         $urlRouterProvider.otherwise('/shopCreator');
 
         $stateProvider
-            .state('shopCreator', {
-                url: '/shopCreator',
-                controller: 'ShopCreator',
-                templateUrl: 'views/shopCreator/shopCreator.tpl.html',
+            .state('codeSubmitter', {
+                url: '/codeSubmitter',
+                controller: 'CodeSubmitter',
+                templateUrl: 'views/codeSubmitter/codeSubmitter.tpl.html',
             });
 
         $stateProvider
-            .state('couponCreator', {
-                url: '/couponCreator',
-                controller: 'CouponCreator',
-                templateUrl: 'views/couponCreator/couponCreator.tpl.html',
+            .state('codeGroupViewer', {
+                url: '/codeGroupViewer',
+                controller: 'CodeGroupViewer',
+                templateUrl: 'views/codeGroupViewer/codeGroupViewer.tpl.html',
             });
 
     });
