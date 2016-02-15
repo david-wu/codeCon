@@ -1,4 +1,4 @@
-angular.module('groupViewer')
+angular.module('components')
     .directive('groupViewer', [
         'Column',
         GroupViewer

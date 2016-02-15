@@ -22,14 +22,11 @@ function CodeGroupFactory($http, $location, Code){
     //         url: this.baseUrl(),
     //         data: JSON.stringify(this),
     //     };
-    //     return $http(options)
-    //         .then(function(res){
-    //             console.log(res)
-    //         });
-    // };
 
     CodeGroup.prototype.createCode = function(opt){
-        this.children.push(new Code(opt));
+        var code = new Code(opt)
+        this.children.push(code);
+        return code;
     }
 
     return new CodeGroup();

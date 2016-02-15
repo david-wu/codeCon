@@ -1,3 +1,10 @@
-<div class="flex">
-    <group-viewer title="Code Browsed" data="CodeGroup.children" columns="columns"></group-viewer>
+<div class="flex" style="height:100%;width:100%;">
+    <div class="flex column grow-1 basis-0">
+        <h1 class="flex space-between">
+            <div>Files ({{CodeGroup.children.length}})</div>
+            <i class="fa fa-plus clickable" ng-click="newCode()"></i>
+        </h1>
+        <group-viewer data="CodeGroup.children" columns="columns"></group-viewer>
+    </div>
+    <code-viewer class="grow-2 basis-0" ng-class="{'shrunk-horizontal': !code}" code="code"></code-viewer>
 </div>

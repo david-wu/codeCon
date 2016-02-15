@@ -3,21 +3,16 @@ angular.module('components')
         CodeViewer
     ]);
 
-function CodeViewer(){
+function CodeViewer(Code, CodeGroup){
     return {
         scope: {
+            code:'=',
         },
         templateUrl: 'components/codeViewer/codeViewer.tpl.html',
         link: linkFunc.bind(null),
     };
 }
 
-function linkFunc(scope, element, attrs){
-
-    var editor = ace.edit(element[0]);
-    editor.setTheme("ace/theme/monokai");
-    editor.getSession().setMode("ace/mode/javascript");
-
-    console.log(editor)
+function linkFunc(scope, element, attr){
 
 }

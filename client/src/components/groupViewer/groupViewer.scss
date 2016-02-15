@@ -1,16 +1,26 @@
 group-viewer{
     flex-grow: 1;
+    flex-basis: 0;
     background-color: #F0FFFF;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
 
     table{
+        max-height: 100%;
+        overflow: auto;
         width: 100%;
+        align: center;
     }
 
     h1{
+        height: 75px;
         padding: 30px;
         font-size: 24px;
         background-color: $brandColor;
         color: white;
+        flex-shrink: 0;
     }
 
     tr{
@@ -23,6 +33,9 @@ group-viewer{
         text-align: center;
         padding: 10px;
         font-size: 14px;
-        margin: 0;
+        *{
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }

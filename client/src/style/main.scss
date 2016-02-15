@@ -10,3 +10,12 @@ body{
 .invisible{
     visibility: none;
 }
+
+.shrunk-horizontal{
+    flex-grow: 0;
+    width: 0;
+}
+
+.clickable{
+    cursor: pointer;
+}

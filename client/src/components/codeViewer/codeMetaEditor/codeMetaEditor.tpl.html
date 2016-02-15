@@ -1,0 +1,18 @@
+<form class="form">
+
+    <label class="form-row">
+        <div class="tag">File name</div>
+        <input type="text" ng-model="code.fileName"></input>
+    </label>
+
+    <label class="form-row">
+        <div class="tag">Language</div>
+        <input type="text" ng-model="code.language"></input>
+    </label>
+
+    <label class="form-row">
+        <div class="tag">License</div>
+        <radio-buttons buttons="licenseButtons" form="code.license"></radio-buttons>
+    </label>
+
+</form>

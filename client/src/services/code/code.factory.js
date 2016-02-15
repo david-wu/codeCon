@@ -9,6 +9,9 @@ function CodeFactory($http, $location){
 
     function Code(options){
         _.extend(this, options);
+        _.defaults(this, {
+            content: '',
+        })
     }
 
     Code.prototype.baseUrl = function(){

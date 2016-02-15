@@ -1,12 +1,12 @@
 angular.module('views', [])
     .config(function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise('/shopCreator');
+        $urlRouterProvider.otherwise('/codeGroupViewer');
 
         $stateProvider
-            .state('codeSubmitter', {
-                url: '/codeSubmitter',
-                controller: 'CodeSubmitter',
-                templateUrl: 'views/codeSubmitter/codeSubmitter.tpl.html',
+            .state('profileViewer', {
+                url: '/profileViewer',
+                controller: 'ProfileViewer',
+                templateUrl: 'views/profileViewer/profileViewer.tpl.html',
             });
 
         $stateProvider

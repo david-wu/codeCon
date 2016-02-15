@@ -29,6 +29,12 @@ function CodeGroupViewer($scope, Coupon, CodeGroup){
 
     $scope.columns = [
         {
+            headerText: 'File Name',
+            html: function(d){
+                return d.fileName;
+            }
+        },
+        {
             headerText: 'Language',
             html: function(d){
                 return d.language;
@@ -47,6 +53,11 @@ function CodeGroupViewer($scope, Coupon, CodeGroup){
             },
             clickHandler: function(d){
                 console.log(d)
+                if($scope.code === d){
+                    $scope.code = undefined;
+                }else{
+                    $scope.code = d;
+                }
             },
         },
     ];
@@ -54,6 +65,10 @@ function CodeGroupViewer($scope, Coupon, CodeGroup){
     $scope.submitCode = function(){
         CodeGroup.createCode($scope.form);
     };
+
+    $scope.newCode = function(){
+        $scope.code = CodeGroup.createCode({});
+    }
 
 
 }
