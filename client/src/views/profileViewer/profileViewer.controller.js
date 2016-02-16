@@ -1,10 +1,25 @@
 angular.module('views')
-    .controller('profileViewer', [
+    .controller('ProfileViewer', [
         '$scope',
         'Code',
         'CodeGroup',
-        profileViewer
+        ProfileViewer
     ]);
 
-function profileViewer($scope, Code, CodeGroup){
+function ProfileViewer($scope, Code, CodeGroup){
+
+    $scope.selectSize = 10;
+
+    $scope.files = [
+        {
+            name: 'a',
+        },
+        {
+            name: 'b',
+        },
+        {
+            name: 'c',
+        },
+    ];
+
 }

@@ -14,14 +14,14 @@ function CodeMetaEditor(){
 }
 
 function linkFunc(scope, element, attrs){
-    scope.licenseButtons = [
-        {
-            text: 'Public',
-            value: 'public',
-        },
+    scope.accessButtons = [
         {
             text: 'Private',
             value: 'private',
+        },
+        {
+            text: 'Public',
+            value: 'public',
         },
     ];
 }

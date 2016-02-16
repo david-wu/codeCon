@@ -11,6 +11,7 @@ function CodeFactory($http, $location){
         _.extend(this, options);
         _.defaults(this, {
             content: '',
+            access: 'private',
         })
     }
 

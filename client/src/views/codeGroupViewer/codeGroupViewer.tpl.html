@@ -4,7 +4,16 @@
             <div>Files ({{CodeGroup.children.length}})</div>
             <i class="fa fa-plus clickable" ng-click="newCode()"></i>
         </h1>
-        <group-viewer data="CodeGroup.children" columns="columns"></group-viewer>
+
+        <select size="10" ng-model="form.currentFile" ng-options="file as file.fileName for file in CodeGroup.children" style="height:100%; overflow:auto;"></select>
+<!--                 <select
+                    ng-model="form.timeFrameType"
+                    ng-options="option.value as option.name for option in options"
+                    style="margin-left:10px; font-size:12px; height: 20px; padding: 10px; border:none; background: #424950; color: white; pointer: cursor">
+                </select>
+ -->
+        <!-- <group-viewer data="CodeGroup.children" columns="columns"></group-viewer> -->
     </div>
-    <code-viewer class="grow-2 basis-0" ng-class="{'shrunk-horizontal': !code}" code="code"></code-viewer>
+
+    <code-viewer class="grow-2 basis-0" ng-if="form.currentFile" code="form.currentFile"></code-viewer>
 </div>

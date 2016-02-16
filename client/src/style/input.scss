@@ -19,4 +19,8 @@ input, select{
         outline-width: 0;
         outline: none;
     }
+
+    option:checked{
+        background-color: $brandColor;
+    }
 }

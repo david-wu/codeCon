@@ -1,17 +1,16 @@
 main{
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+
+    top-bar{
+        position: absolute;
+        top:0;
+    }
 
     #main-ui-view{
         position: absolute;
-        overflow: auto;
-        height: 100%;
-        width: 100%;
         top: 75px;
-
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: auto;
     }
 }
